@@ -177,12 +177,44 @@ http://127.0.0.1:4040
 
 ---
 
-## 9. Stop Ngrok
+## 9. Stop Servers / Switch Back to Herd
 
-Press `Ctrl+C` in the ngrok terminal.
+### 9a. Stop PHP Server
 
-* The public URL will no longer be accessible
-* Free plan URLs change on each session
+In terminal running PHP server:
+
+```
+Ctrl + C
+```
+
+### 9b. Stop Ngrok
+
+In ngrok terminal:
+
+```
+Ctrl + C
+```
+
+* Public ngrok URL will stop working.
+
+### 9c. Resume Local Development with Herd
+
+1. Ensure the site is linked:
+
+```powershell
+herd link cristi123400_laravel
+```
+
+2. Access the site in browser:
+
+```
+http://cristi123400_laravel.test
+```
+
+* Herd automatically handles the server.
+* Use this workflow for normal local development.
+
+---
 
 ---
 
@@ -225,4 +257,3 @@ Press `Ctrl+C` in the ngrok terminal.
 [linkedin-url]: https://linkedin.com/company/learnwithfair
 
 #learnwithfair #rahtulrabbi #rahatul-rabbi #learn-with-fair
-
